@@ -5,7 +5,8 @@ nav{
   position: fixed;
   display: flex;
   border-radius: 0;
-  background-image: linear-gradient(to bottom, #212121 10%, #2121212d 100%);
+  background-image: linear-gradient(to bottom, #212121 20%, #212121a1 60%, transparent);
+  z-index: 5;
 }
 nav *{
   border-radius: 0;
@@ -14,11 +15,14 @@ nav *{
   display: flex;
   column-gap: 20px;
   align-items: center;
-  backdrop-filter: blur;
 }
 #logo > *{
   display: inline-block;
   line-height: 0px;
+}
+#nav-btn{
+  padding: 5px;
+  background-color: transparent;
 }
 #logo img{
   height: 21px;
@@ -28,6 +32,46 @@ nav *{
 }
 #nav-links ul{
   display: none;
+}
+#nav-links-mob-ctn{
+  height: 200px;
+  position: fixed;
+  margin: 70px 0;
+  width: 100vw;
+  z-index: 5;
+}
+#nav-links-mob{
+  position: absolute;
+  display: none;
+  right: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: #81f2ffcc;
+  height: 250px;
+  width: 220px;
+}
+#nav-links-mob li{
+  background-color: #212121;
+  box-sizing: border-box;
+  height: 40px;
+  width: 190px;
+  padding: 0 15px;
+}
+#nav-links-mob a{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#nav-links-mob a h3{
+  color: #ffffff;
+  font-weight: 500;
+}
+#nav-links-mob a h2{
+  color: #00E5FF;
+  animation: arrow_animation 1s infinite;
 }
 
 /* Intro sectoin styles */
@@ -68,6 +112,7 @@ nav *{
   font-size: 0.75em;
   display: flex;
   align-items: center;
+  animation: btn_animation 1s infinite;
 }
 #btn1 h3{
   color: #00E5FF;
@@ -88,6 +133,7 @@ nav *{
 #intro-links ul li{
   background-color: #ffffff;
   height: 22px;
+  animation: btn_animation 1s infinite;
 }
 
 /* Services section styles */
@@ -336,6 +382,7 @@ nav *{
 #testimonials-sec div button{
   height: 26px;
   width: 26px;
+  animation: btn_animation 1s infinite;
 }
 
 
@@ -423,6 +470,7 @@ form input[type="submit"]{
   font-size: 17px;
   font-weight: bold;
   background-color: #00E5FF;
+  animation: btn_animation 1s infinite;
 }
 
 
@@ -455,6 +503,10 @@ footer *{
 }
 #footer-text img{
   height: 22px;
+  animation: btn_animation 1s infinite;
+}
+#footer-text > ul{
+  margin-top: 20px;
 }
 #footer-text ul > *{
   display: inline-block;
@@ -475,4 +527,28 @@ footer *{
   justify-content: center;
   align-items: center;
   font-size: 12px;
+}
+
+/*  Animations  */
+@keyframes arrow_animation {
+  0%{
+    transform: translate(-2px, 0px);
+  }
+  50%{
+    transform: translate(2px, 0px);
+  }
+  100%{
+    transform: translate(-2px, 0px);
+  }
+}
+@keyframes btn_animation {
+  0%{
+    transform: scale(1.05);
+  }
+  50%{
+    transform: scale(0.95);
+  }
+  100%{
+    transform: scale(1.05);
+  }
 }

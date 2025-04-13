@@ -81,5 +81,6 @@ p{
 .button img{
   height: 22px;
   margin-right: 2px;
+  animation: arrow_animation 1s infinite;
 }
 
