@@ -6,6 +6,10 @@
  border-radius: 20px;
  color: #212121;
 }
+.appear{
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
 body{
   background-color: #212121;
   overflow-x: hidden;
@@ -82,5 +86,15 @@ p{
   height: 22px;
   margin-right: 2px;
   animation: arrow_animation 1s infinite;
+}
+@keyframes elements_appear_onscroll {
+  0%{
+    transform: translate(0px, 50px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(0px, 0px);
+    opacity: 100%;
+  }
 }
 

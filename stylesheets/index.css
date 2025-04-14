@@ -23,6 +23,15 @@ nav *{
 #nav-btn{
   padding: 5px;
   background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+#nav-btn div{
+  height: 5px;
+  width: 30px;
+  border-radius: 2.5px;
+  background-color: #00E5FF;
 }
 #logo img{
   height: 21px;
@@ -552,3 +561,36 @@ footer *{
     transform: scale(1.05);
   }
 }
+@keyframes line1-anim{
+  0%{
+    transform: rotate(0deg) translate(0px,0px);
+  }
+  100%{
+    transform: rotate(45deg) translate(5px,5px);
+  }
+}
+@keyframes line2-anim{
+  0%{
+    transform: rotate(0deg) translate(0px,0px);
+  }
+  100%{
+    transform: rotate(-45deg) translate(5px,-5px);
+  }
+}
+@keyframes line1-undo-anim{
+  0%{
+    transform: rotate(45deg) translate(5px,5px);
+  }
+  100%{
+    transform: rotate(0deg) translate(0px,0px);
+  }
+}
+@keyframes line2-undo-anim{
+  0%{
+    transform: rotate(-45deg) translate(5px,-5px);
+  }
+  100%{
+    transform: rotate(0deg) translate(0px,0px);
+  }
+}
+
