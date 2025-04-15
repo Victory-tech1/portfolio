@@ -115,6 +115,7 @@ nav *{
   height: 28px;
 }
 #btn1{
+  height: 28px;
   padding: 0 15px;
   background: transparent;
   border: solid 2px #00E5FF;
@@ -151,7 +152,9 @@ nav *{
 }
 #services-sec div ul{
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 30px;
+
 }
 .service{
   height: 200px;
@@ -402,8 +405,12 @@ nav *{
   border-radius: 0;
   padding: 50px 20px;
 }
-#hire-sec div{
-  display: flex; 
+#hire-sec > div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  row-gap: 50px;
+  column-gap: 30px;
 }
 #illustration-1{
   height: 250px;
@@ -411,9 +418,6 @@ nav *{
 }
 #illustration-2{
   height: 200px;
-}
-#hire-sec h2{
-  margin-top: 50px;
 }
 #qualities-ctn{
   display: flex;
@@ -443,7 +447,14 @@ nav *{
 #contact-sec{
   padding: 50px 20px;
 }
+#contact-sec > div {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 50px;
+  column-gap: 20px;
+}
 #contact-links{
+  flex-shrink: 0;
   margin: 30px 0;
   display: flex;
   flex-direction: column;
@@ -458,7 +469,10 @@ nav *{
   background-color: #ffffff;
 }
 #contact-form{
-  margin-top: 50px;
+  justify-self: fl;
+  flex-shrink: 1;
+  min-width: 250px;
+  max-width: 350px;
 }
 form input{
   padding: 14px 18px;
