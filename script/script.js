@@ -8,12 +8,11 @@ const line2 = document.getElementById('nav-btn-line2');
 navBtn.addEventListener('click', () => {
   if (navLinks.style.display === 'none') {
     navLinks.style.display = 'flex';
-    navLinks.style.right = '20px';
+    navLinks.style.animation = 'element_appear 1s forwards';
     line1.style.animation = 'line1-anim 0.5s forwards';
     line2.style.animation = 'line2-anim 0.5s forwards';
   } else {
     navLinks.style.display = 'none';
-    navLinks.style.right = '20px';
     line1.style.animation = 'line1-undo-anim 0.5s forwards';
     line2.style.animation = 'line2-undo-anim 0.5s forwards';
   }
