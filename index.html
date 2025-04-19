@@ -18,7 +18,7 @@
     </div>
     <div></div>
     <div id="nav-links">
-      <button id="nav-btn"><div id="nav-btn-line1"></div><div id="nav-btn-line2"></div></button>
+      <button type="button" title="Nav Bar Button" id="nav-btn"><div id="nav-btn-line1"></div><div id="nav-btn-line2"></div></button>
       <ul>
         <li><a href="#intro">Introduction</a></li>
         <li><a href="#about-sec">About</a></li>
@@ -64,7 +64,7 @@
     </div>
   </section>
   <section id="services-sec">
-    <h3 class="white-text">Services</h3>
+    <h3 class="white-text">- Services</h3>
     <h1 class="white-text"><span class="blue-text italic">Services</span> I Provide</h1>
     <div>
       <ul>
@@ -96,29 +96,31 @@
     </div>
     <a class="button appear" href="#"><h3>View all services</h3><img src="./images/icons/play_white_bg.svg" alt=""></a>
   </section>
-  <section id="about-sec" class="white-bg">
+  <section id="about-sec" class="white-bg ctn">
     <h3 class=" appear">- About me</h3>
-    <div id="about-img" class=" appear">
+    <div id="about-items">
+      <div id="about-img" class=" appear">
       <div>
         <div>
           <img src="" alt="">
         </div>
       </div>
-    </div>
-    <div id="about-text">
-      <h1 class=" appear">Who is <span class="blue-text italic">Victory</span>?</h1>
-      <p class=" appear">
-        My name is Okoye Victory Chukwuebuka. Form Anambra state, Nigeria. I am a professional web developer and designer.
-        My services are available worldwide. I prefer freelance jobs but I am also open to accept a part-time or full-time job.
-        Hire me for simplicity, speed and stunning design.
-      </p>
-    </div>
-    <div id="about-btn-sign">
-      <a class="button  appear" href="#"><h3>Download CV</h3><img src="./images/icons/play_white_bg.svg" alt=""></a>
-      <p id="sign" class=" appear">Victory</p>
+      </div>
+      <div id="about-text">
+        <h1 class=" appear">Who is <span class="blue-text italic">Victory</span>?</h1>
+        <p class=" appear">
+          My name is Okoye Victory Chukwuebuka. Form Anambra state, Nigeria. I am a professional web developer and designer.
+          My services are available worldwide. I prefer freelance jobs but I am also open to accept a part-time or full-time job.
+          Hire me for simplicity, speed and stunning design.
+        </p>
+        <div id="about-btn-sign">
+          <a class="button  appear" href="#"><h3>Download CV</h3><img src="./images/icons/play_white_bg.svg" alt=""></a>
+          <p id="sign" class=" appear">Victory</p>
+        </div>
+      </div>
     </div>
   </section>
-  <section id="tools-sec">
+  <section id="tools-sec" class="ctn">
     <h4 class="appear">Tools That I Can Use</h4>
     <div>
       <ul id="tools">
@@ -305,22 +307,31 @@
     <h2 class="white-text appear">Turning <span class="blue-text italic">ideas</span> into seamless <span class="blue-text italic">web experiences</span>.</h2>
     <h3 class="white-text appear">- Contact us now</h3>
     <div>
-      <ul id="contact-links">
-        <li class="appear">
-          <div><img src="" alt=""></div>
-          <p class="white-text">+234 810 571 5843</p>
-        </li>
-        <li class="appear">
-          <div><img src="" alt=""></div>
-          <p class="white-text">victorytechv1@gmail.com</p>
-        </li>
-        <li class="appear">
-          <div><img src="" alt=""></div>
-          <p class="white-text">victory tech</p>
-        </li>
-      </ul>
+      <div id="contact-links">
+        <ul>
+          <li class="appear">
+            <div><img src="" alt=""></div>
+            <p class="blue-text">+234 810 571 5843</p>
+          </li>
+          <li class="appear">
+            <div><img src="" alt=""></div>
+            <p class="blue-text">victorytechv1@gmail.com</p>
+          </li>
+          <li class="appear">
+            <div><img src="" alt=""></div>
+            <p class="blue-text">victory tech</p>
+          </li>
+        </ul>
+        <div id="freelance-links-ctn">
+          <h2 class="white-text appear">If you have <span class="blue-text italic">security concerns</span>, you can <span class="blue-text italic">hire us</span> through these <span class="blue-text italic">secure freelancing platforms</span>.</h2>
+          <ul id="freelance-links" class="appear">
+            <li class="white-text">Freelancer: <a href="" class="blue-text">@victorytech</a></li>
+            <li class="white-text">Upwork: <a href="" class="blue-text">@victorytech</a></li>
+          </ul>
+        </div>
+      </div>
       <div id="contact-form">
-        <h2 class="white-text appear">Send us an E-mail</h2>
+        <h2 class="blue-text appear">Send us an E-mail</h2>
         <form id="contactForm" action="https://formsubmit.co/victorytech1v@gmail.com" method="post" class="appear">
           <input type="text" name="name" id="name" placeholder="Name" autocomplete="name" required>
           <input type="email" name="email" id="email" placeholder="E-Mail Address" autocomplete="email" required>
@@ -347,7 +358,7 @@
           </ul>
         </div>
         <div id="footer-nav">
-          <h4 class="blue-text">Navigation</h4>
+          <h4>Navigation</h4>
           <ul>
             <li><a href="#intro"><p>Introduction</p></a></li>
             <li><a href="#about-sec"><p>About</p></a></li>
@@ -356,11 +367,11 @@
           </ul>
         </div>
         <div id="footer-contact">
-          <h4 class="blue-text">Contact</h4>
+          <h4>Contact</h4>
           <ul>
             <li><a href="#"><p>victorytechv1@gmail.com</p></a></li>
             <li><a href="#"><p>+234 810 571 5843</p></a></li>
-            <li><a href="#"><p></p>victory tech</p></a></li>
+            <li><a href="#"><p>victory tech</p></a></li>
           </ul>
         </div>
       </div>

@@ -87,9 +87,7 @@ nav *{
 #intro{
   padding: 100px 20px 20px 20px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  margin: auto;
+  display: grid;
 }
 #intro-img{
   margin: 30px auto;
@@ -153,15 +151,16 @@ nav *{
 #services-sec div ul{
   display: flex;
   flex-wrap: wrap;
-  column-gap: 30px;
-
+  row-gap: 30px;
+  margin: 30px 0;
+  justify-content: space-evenly;
 }
 .service{
   height: 200px;
   width: 200px;
   background-color: white;
-  margin: 30px auto;
   padding: 20px;
+  margin: 0 15px;
 }
 .service > div{
   height: 100%;
@@ -270,7 +269,7 @@ nav *{
 }
 #portfolio-sec > ul{
   display: flex;
-  row-gap: 30px;
+  justify-content: space-evenly;
   margin-top: 30px;
   flex-wrap: wrap;
   align-items: center;
@@ -278,7 +277,7 @@ nav *{
 .portfolio-item{
   height: 305px;
   width: 222px;
-  margin: auto;
+  margin: 0 20px;
   background-color: #ffffff;
 }
 .portfolio-item div{
@@ -454,7 +453,6 @@ nav *{
   column-gap: 20px;
 }
 #contact-links{
-  flex-shrink: 0;
   margin: 30px 0;
   display: flex;
   flex-direction: column;
@@ -466,6 +464,7 @@ nav *{
 #contact-links li div{
   height: 28px;
   width: 28px;
+  margin: 10px 15px;
   background-color: #ffffff;
 }
 #contact-form{
@@ -473,6 +472,12 @@ nav *{
   flex-shrink: 1;
   min-width: 250px;
   max-width: 350px;
+}
+#freelance-links-ctn ul{
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin-top: 30px;
 }
 form input{
   padding: 14px 18px;
@@ -541,8 +546,14 @@ footer *{
 #footer-nav ul li{
   margin-top: 12px;
 }
+#footer-nav ul li p{
+  color: #00E5FF;
+}
 #footer-contact ul li{
   margin-top: 16px;
+}
+#footer-contact ul li a p{
+  color: #00E5FF;
 }
 #copyright{
   height: 56px;
@@ -618,4 +629,116 @@ footer *{
     opacity: 100%;
   }
 }
+@media (min-width: 730px) {
+  h1{
+    font-size: 2.3em;
+  }
+  #intro{
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+  #intro-buttons{
+    margin: auto auto auto 0;
+    order: 3;
+    column-gap: 30px;
+  }
+  #intro-text{
+    order: 1;
+    margin: auto 0;
+  }
+  #intro-img{
+    order: 2;
+    grid-row: span 2;
+    margin: 0 0 0 auto;
+  }
+  #intro-links{
+    order: 4;
+    grid-column: span 2;
+  }
+  #about-items{
+    display: flex;
+  }
+  #about-text{
+    padding: 20px 0 0 20px;
+    margin: auto;
+  }
+}
+@media (min-width: 1000px) {
+  #services-sec, #about-sec, #tools-sec, #portfolio-sec, #education-sec, #testimonials-sec, #hire-sec, #contact-sec, #connect{
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  nav{
+    padding: 30px 45px;
+  }
+  #nav-links button{
+    display: none;
+  }
+  #nav-links ul{
+    display: flex;
+    column-gap: 60px;
+  }
+  #nav-links ul a{
+    color: #00E5FF;
+  }
+  h1{
+    font-size: 3em;
+  }
+  h3{
+    font-size: 1.1em;
+  }
+  #nav{
+    padding: 30px 45px;
+  }
+  #intro{
+    padding: 100px 45px 20px 45px;
+  }
+  #contact-sec > div {
+    display: flex;
+    flex-wrap: nowrap;
+    row-gap: 50px;
+    column-gap: 20px;
+  }
+  #contact-form{
+    margin: auto;
+  }
+}
+@media (min-width: 1200px) {
+  #services-sec, #about-sec, #tools-sec, #portfolio-sec, #education-sec, #testimonials-sec, #hire-sec, #contact-sec, #connect{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  nav{
+    padding: 30px 100px;
+  }
+  #nav-links ul{
+    display: flex;
+    column-gap: 100px;
+  }
+  #nav-links ul a{
+    color: #00E5FF;
+  }
+  h1{
+    font-size: 3em;
+  }
+  h3{
+    font-size: 1.1em;
+  }
+  #nav{
+    padding: 30px 100px;
+  }
+  #intro{
+    padding: 222px 100px 20px 100px;
+  }
+  #contact-sec > div {
+    display: flex;
+    flex-wrap: nowrap;
+    row-gap: 50px;
+    column-gap: 20px;
+  }
+  #contact-form{
+    margin: auto;
+  }
+}
+
 
