@@ -1,20 +1,23 @@
 /*  Nav Button functionality  */
 
-const navBtn = document.getElementById('nav-btn');
-const navLinks = document.getElementById('nav-links-mob');
-const line1 = document.getElementById('nav-btn-line1');
-const line2 = document.getElementById('nav-btn-line2');
+const navBtn = document.getElementById('nav-btn'),
+navLinks = document.getElementById('nav-links-mob'),
+line1 = document.getElementById('nav-btn-line1'),
+line2 = document.getElementById('nav-btn-line2');
+let tog = 0;
 
 navBtn.addEventListener('click', () => {
-  if (navLinks.style.display === 'none') {
+  if (tog === 0) {
     navLinks.style.display = 'flex';
     navLinks.style.animation = 'element_appear 1s forwards';
     line1.style.animation = 'line1-anim 0.5s forwards';
     line2.style.animation = 'line2-anim 0.5s forwards';
+    tog = 1;
   } else {
     navLinks.style.display = 'none';
     line1.style.animation = 'line1-undo-anim 0.5s forwards';
     line2.style.animation = 'line2-undo-anim 0.5s forwards';
+    tog = 0;
   }
 })
 
@@ -49,7 +52,7 @@ prevBtn.addEventListener('click', () => {
   } else {
     TestimonialItems[index].style.animation = 'slide_in 0.5s reverse backwards';
     TestimonialItems[index].style.display = 'none';
-    TestimonialItems[index - 1].style.animation = "slide_out 0.5s reverse backwards";
+    TestimonialItems[index - 1].style.animation = 'slide_out 0.5s reverse backwards';
     TestimonialItems[index - 1].style.display = 'flex';
     index--;
   };
@@ -67,11 +70,3 @@ nextBtn.addEventListener('click', () => {
     index++;
   };
 })
-
-/*function print() {
-  while (index < TestimonialItems.length){
-    console.log(currentItem);
-    index++;
-  };
-}
-print();*/
