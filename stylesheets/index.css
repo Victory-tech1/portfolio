@@ -19,6 +19,7 @@ nav *{
 #logo > *{
   display: inline-block;
   line-height: 0px;
+  font-size: 1em;
 }
 #nav-btn{
   padding: 5px;
@@ -42,15 +43,10 @@ nav *{
 #nav-links ul{
   display: none;
 }
-#nav-links-mob-ctn{
-  height: 200px;
+#nav-links-mob{
   position: fixed;
   margin: 70px 0;
-  width: 100vw;
   z-index: 5;
-}
-#nav-links-mob{
-  position: absolute;
   display: none;
   right: 20px;
   align-items: center;
@@ -117,13 +113,13 @@ nav *{
   padding: 0 15px;
   background: transparent;
   border: solid 2px #00E5FF;
-  font-size: 0.75em;
   display: flex;
   align-items: center;
   animation: btn_animation 1s infinite;
 }
 #btn1 h3{
   color: #00E5FF;
+  font-size: 0.75em;
 }
 #intro-links{
   text-align: center;
@@ -184,6 +180,9 @@ nav *{
 #about-sec{
   border-radius: 0;
   padding: 50px 20px;
+}
+#about-img{
+  display: inline-block;
 }
 #about-img div{
   height: 320px;
@@ -273,6 +272,7 @@ nav *{
   margin-top: 30px;
   flex-wrap: wrap;
   align-items: center;
+  row-gap: 30px;
 }
 .portfolio-item{
   height: 305px;
@@ -349,25 +349,28 @@ nav *{
 /*  Testimonials section styles  */
 #testimonials-sec{
   padding: 50px 20px;
+  width: 100vw;
+  box-sizing: border-box;
 }
 #testimonials-sec h3, #testimonials-sec h1{
   text-align: center;
 }
 #testimonials-sec ul{
-  width: 100vw;
-  position: absolute;
-  display: flex;
+  overflow-x: hidden;
   margin: 30px 0;
-  left: -245px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 #testimonials-sec ul li{
+  position: absolute;
   background-color: #ffffff;
   height: 152px;
   width: 270px;
-  margin: 0 15px;
+  margin: 0 auto;
   padding: 12px;
   box-sizing: border-box;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 .star-rating * {
@@ -629,6 +632,30 @@ footer *{
     opacity: 100%;
   }
 }
+@keyframes slide_in {
+  0%{
+    transform: translate(300px, 0px);
+    opacity: 0;
+    display: none;
+  }
+  100%{
+    transform: translate(0px, 0px);
+    opacity: 100%;
+    display: flex;
+  }
+}
+@keyframes slide_out {
+  0%{
+    transform: translate(0px, 0px);
+    opacity: 100%;
+    display: flex;
+  }
+  100%{
+    transform: translate(-300px, 0px);
+    opacity: 0;
+    display: none;
+  }
+}
 @media (min-width: 730px) {
   h1{
     font-size: 2.3em;
@@ -719,16 +746,61 @@ footer *{
     color: #00E5FF;
   }
   h1{
-    font-size: 3em;
+    font-size: 4em;
   }
   h3{
-    font-size: 1.1em;
+    font-size: 1.3em;
   }
   #nav{
     padding: 30px 100px;
   }
   #intro{
-    padding: 222px 100px 20px 100px;
+    padding: 110px 100px 20px 100px;
+  }
+  #intro-img{
+    margin: auto 0 auto auto;
+  }
+  #intro-img > div{
+    height: 420px;
+    width: 420px;
+  }
+  #intro-img div div{
+    height: 420px;
+    width: 420px;
+  }
+  #about-img{
+    width: 450px;
+    margin: 0 auto;
+  }
+  #about-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #about-text{
+    margin: auto;
+    padding: 0;
+  }
+  .portfolio-item{
+    height: 500px;
+    width: 322px;
+  }
+  .portfolio-item div{
+    height: 400px;
+    width: 312px;
+  }
+  .portfolio-item ul li{
+    padding: 10px 20px;
+  }
+  .edu-ctn{
+    height: 400px;
+    width: 352px;
+    padding: 20px 16px;
+  }
+  .edu-ctn ul li{
+    height: 152px;
+    width: 320px;
+    margin: 16px auto 0 auto;
+    padding: 8px 11px;
   }
   #contact-sec > div {
     display: flex;
