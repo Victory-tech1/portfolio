@@ -7,18 +7,26 @@ line2 = document.getElementById('nav-btn-line2');
 let tog = 0;
 
 navBtn.addEventListener('click', () => {
-  if (tog === 0) {
+  if (tog == 0) {
     navLinks.style.display = 'flex';
-    navLinks.style.animation = 'element_appear 1s forwards';
+    navLinks.style.animation = 'element_appear 0.5s forwards';
     line1.style.animation = 'line1-anim 0.5s forwards';
     line2.style.animation = 'line2-anim 0.5s forwards';
     tog = 1;
   } else {
     navLinks.style.display = 'none';
+    navLinks.style.animation = 'element_appear 0.5s reverse backwards';
     line1.style.animation = 'line1-undo-anim 0.5s forwards';
     line2.style.animation = 'line2-undo-anim 0.5s forwards';
     tog = 0;
   }
+})
+document.addEventListener('scroll', () => {
+  navLinks.style.display = 'none';
+  navLinks.style.animation = 'element_appear 0.5s reverse backwards';
+  line1.style.animation = 'line1-undo-anim 0.5s forwards';
+  line2.style.animation = 'line2-undo-anim 0.5s forwards';
+  tog = 0;
 })
 
 /*  Elements to appear onscroll functionality  */
@@ -37,36 +45,40 @@ window.addEventListener('scroll', () => {
 
 /*  Slide through testimonials funtionality  */
 
-const TestimonialItems = document.getElementsByClassName('testimonial-item'),
+const testimonialItems = document.getElementsByClassName('testimonial-item'),
 prevBtn = document.getElementById('prev-btn'),
 nextBtn = document.getElementById('next-btn');
 let index = 0,
-currentItem = TestimonialItems[index];
+currentItem = testimonialItems[index];
 currentItem.style.display = 'flex';
 
 prevBtn.addEventListener('click', () => {
-  if (index < 0) {
-    index = TestimonialItems.length - 1;
-  } else if (index > TestimonialItems.length){
-    index = 0;
+  if (index == 0) {
+    index = testimonialItems.length - 1;
+    testimonialItems[index].style.animation = 'slide_out 0.5s reverse backwards';
+    testimonialItems[index].style.display = 'flex';
+    testimonialItems[0].style.animation = 'slide_in 0.5s reverse backwards';
+    testimonialItems[0].style.display = 'none';
   } else {
-    TestimonialItems[index].style.animation = 'slide_in 0.5s reverse backwards';
-    TestimonialItems[index].style.display = 'none';
-    TestimonialItems[index - 1].style.animation = 'slide_out 0.5s reverse backwards';
-    TestimonialItems[index - 1].style.display = 'flex';
+    testimonialItems[index].style.animation = 'slide_in 0.5s reverse backwards';
+    testimonialItems[index].style.display = 'none';
+    testimonialItems[index - 1].style.animation = 'slide_out 0.5s reverse backwards';
+    testimonialItems[index - 1].style.display = 'flex';
     index--;
   };
 })
 nextBtn.addEventListener('click', () => {
-  if (index < 0) {
-    index = TestimonialItems.length - 1;
-  } else if (index > TestimonialItems.length){
+  if (index == testimonialItems.length - 1) {
     index = 0;
+    testimonialItems[index].style.animation = 'slide_in 0.5s forwards';
+    testimonialItems[index].style.display = 'flex';
+    testimonialItems[testimonialItems.length - 1].style.animation = 'slide_out 0.5s forwards';
+    testimonialItems[testimonialItems.length - 1].style.display = 'none';
   } else {
-    TestimonialItems[index].style.animation = 'slide_out 0.5s forwards';
-    TestimonialItems[index].style.display = 'none';
-    TestimonialItems[index + 1].style.animation = 'slide_in 0.5s forwards';
-    TestimonialItems[index + 1].style.display = 'flex';
+    testimonialItems[index].style.animation = 'slide_out 0.5s forwards';
+    testimonialItems[index].style.display = 'none';
+    testimonialItems[index + 1].style.animation = 'slide_in 0.5s forwards';
+    testimonialItems[index + 1].style.display = 'flex';
     index++;
   };
 })

@@ -68,6 +68,9 @@ h5{
 .black-bg{
   background-color: #212121;
 }
+.center{
+  text-align: center;
+}
 .button{
   height: 28px;
   display: flex;

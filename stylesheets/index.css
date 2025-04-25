@@ -373,8 +373,25 @@ nav *{
   display: none;
   flex-direction: column;
 }
-.star-rating * {
+.rating * {
   display: inline-block;
+}
+.star-rating {
+  height: 50px;
+  width: 200px;
+}
+.star-rating * {
+  position: absolute;
+  border-radius: 0;
+}
+.star-rating img{
+  height: 50px;
+  width: 200px;
+}
+.star-rating div{
+  background-color: gold;
+  height: 50px;
+  width: 100%;
 }
 .testimonial-text{
   margin-bottom: auto;
@@ -391,7 +408,9 @@ nav *{
   background-color: #dfdfdf;
 }
 #testimonials-sec > div{
-  text-align: center;
+  display: flex;
+  column-gap: 20px;
+  justify-content: center;
   margin-top: 200px;
 }
 #testimonials-sec div button{
@@ -656,6 +675,50 @@ footer *{
     display: none;
   }
 }
+@media (max-width: 375px) {
+  h1{
+    font-size: 1.7em;
+  }
+  #intro-img div{
+    height: 80vw;
+    width: 80vw;
+  }
+  #intro-img div div{
+    height: 80vw;
+    width: 80vw;
+  }
+  #intro-buttons{
+    row-gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #intro-buttons a button{
+    height: 20px;
+  }
+  #btn1{
+    height: 20px;
+    padding: 0 5px;
+  }
+  #about-img div{
+    height: 80vw;
+    width: 80vw;
+    margin: 20px auto;
+  }
+  #about-img div div{
+    height: 80vw;
+    width: 80vw;
+  }
+  #illustration-2{
+    display: none;
+  }
+  #footer-nav{
+    grid-column: span 2;
+    margin-bottom: 20px;
+  }
+  #footer-contact{
+    grid-column: span 2;
+  }
+}
 @media (min-width: 730px) {
   h1{
     font-size: 2.3em;
@@ -719,6 +782,14 @@ footer *{
   }
   #intro{
     padding: 100px 45px 20px 45px;
+  }
+  #testimonials-sec ul li{
+    height: 200px;
+    width: 400px;
+    padding: 15px;
+  }
+  #testimonials-sec > div{
+    margin-top: 250px;
   }
   #contact-sec > div {
     display: flex;
