@@ -28,11 +28,26 @@ document.addEventListener('scroll', () => {
   line2.style.animation = 'line2-undo-anim 0.5s forwards';
   tog = 0;
 })
+document.addEventListener("click", (event) => {
+  if (
+    !navLinks.contains(event.target) &&
+    !navBtn.contains(event.target)
+  ) {
+    navLinks.style.display = 'none';
+    navLinks.style.animation = 'element_appear 0.5s reverse backwards';
+    line1.style.animation = 'line1-undo-anim 0.5s forwards';
+    line2.style.animation = 'line2-undo-anim 0.5s forwards';
+    tog = 0;
+  }
+});
 
 /*  Elements to appear onscroll functionality  */
-const allElements = document.body.getElementsByClassName('appear');
+const allElements = document.body.getElementsByClassName('appear'),
+topNav = document.getElementById('top-nav');
 
 window.addEventListener('scroll', () => {
+  topNav.style.transform = 'translate(0, -15px)';
+
   for (const element of allElements) {
     element.addEventListener('animationend', () => {
       element.style.opacity = '100%';
@@ -42,7 +57,13 @@ window.addEventListener('scroll', () => {
       element.style.animation = 'elements_appear_onscroll 1s';
     };
 }})
-
+/*
+if (topNav.style.transform === 'translate(0, -15px)') {
+  navLinks.style.marginTop = '55px';
+} else {
+  navLinks.style.marginTop = '70px';
+}
+*/
 /*  Slide through testimonials funtionality  */
 
 const testimonialItems = document.getElementsByClassName('testimonial-item'),

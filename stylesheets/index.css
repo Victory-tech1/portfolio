@@ -1,12 +1,13 @@
 nav{
-  width: 100vw;
-  padding: 20px;
+  width: 100%;
+  padding: 20px 6% 5px;
   box-sizing: border-box;
   position: fixed;
   display: flex;
   border-radius: 0;
-  background-image: linear-gradient(to bottom, #212121 20%, #212121a1 60%, transparent);
+  background-color: rgba(33, 33, 33, .3);
   z-index: 5;
+  transition: transform 0.5s ease;
 }
 nav *{
   border-radius: 0;
@@ -81,7 +82,7 @@ nav *{
 
 /* Intro sectoin styles */
 #intro{
-  padding: 100px 20px 20px 20px;
+  padding: 100px 6% 20px;
   box-sizing: border-box;
   display: grid;
 }
@@ -93,17 +94,17 @@ nav *{
   height: 320px;
   width: 320px;
   margin: auto;
-  border-radius: 20px;
 }
 #intro-img div div{
   background-color: #00E5FF;
   height: 320px;
   width: 320px;
-  border-radius: 700px 50px 50px 50px;
+  border-radius: 30px 5px 250px 5px;
 }
 #intro-buttons{
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 #intro-buttons a button{
   height: 28px;
@@ -142,7 +143,7 @@ nav *{
 
 /* Services section styles */
 #services-sec{
-  padding: 50px 20px;
+  padding: 50px 6%;
 }
 #services-sec div ul{
   display: flex;
@@ -168,6 +169,11 @@ nav *{
   border-radius: 50%;
   height: 53px;
   width: 53px;
+  text-align: center;
+}
+.service div div img{
+  height: 45px;
+  margin-top: 4px;
 }
 .service-text{
   margin-bottom: auto;
@@ -179,22 +185,22 @@ nav *{
 /* About section styles */
 #about-sec{
   border-radius: 0;
-  padding: 50px 20px;
+  padding: 50px 6%;
 }
 #about-img{
-  display: inline-block;
+  display: block;
 }
 #about-img div{
   height: 320px;
   width: 320px;
-  background-color: #00E5FF;
+  background-color: #212121;
   margin: 30px auto;
 }
 #about-img div div{
   height: 320px;
   width: 320px;
-  border-radius: 50px 50px 700px 50px;
-  background-color: #212121;
+  border-radius: 5px 30px 5px 250px;
+  background-color: #00E5FF;
 }
 #about-btn-sign{
   margin: 20px 0 30px 0;
@@ -210,7 +216,7 @@ nav *{
 
 /* Tools section styles */
 #tools-sec{
-  padding: 50px 20px;
+  padding: 50px 6%;
   background-color: #00E5FF;
   border-radius: 0;
 }
@@ -224,8 +230,7 @@ nav *{
 .tool > div{
   height: 168px;
   width: 112px;
-  margin-top: 30px;
-  border-radius: 150px;
+  margin: 30px auto 0;
   display: flex;
   flex-direction: column;
 }
@@ -248,13 +253,19 @@ nav *{
   margin-top: auto;
 }
 .tool div div{
-  border-radius: 150px;
   height: 86px;
   width: 86px;
   margin: 12px auto;
+  box-sizing: border-box;
+}
+.tool div div img{
+  height: 80%;
+  margin: 10% 0;
 }
 .tool > div span{
-  font-size: 23px;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 45px;
 }
 .tool h3{
   margin-top: 13px;
@@ -264,26 +275,28 @@ nav *{
 #portfolio-sec{
   display: flex;
   flex-direction: column;
-  padding: 50px 20px;
+  padding: 50px 6%;
 }
 #portfolio-sec > ul{
   display: flex;
   justify-content: space-evenly;
   margin-top: 30px;
   flex-wrap: wrap;
+  flex-shrink: 1;
   align-items: center;
   row-gap: 30px;
 }
 .portfolio-item{
   height: 305px;
-  width: 222px;
+  width: 260px;
   margin: 0 20px;
   background-color: #ffffff;
 }
 .portfolio-item div{
   height: 212px;
-  width: 212px;
-  margin: 5px auto;
+  width: auto;
+  box-sizing: border-box;
+  margin: 5px;
   background-color: #DFDFDF;
 }
 .portfolio-item ul{
@@ -307,7 +320,7 @@ nav *{
 
 /* Education section styles */
 #education-sec{
-  padding: 50px 20px;
+  padding: 50px 6%;
 }
 #education-sec *{
   box-sizing: border-box;
@@ -328,7 +341,7 @@ nav *{
 #education-sec > div{
   margin: 36px 0;
   display: flex;
-  row-gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
 }
 .edu-ctn{
@@ -337,6 +350,14 @@ nav *{
   width: 282px;
   padding: 20px 16px;
   margin: auto;
+}
+.edu-ctn span{
+  display: flex;
+  align-items: center;
+}
+.edu-ctn span img{
+  height: 30px;
+  margin-right: 10px;
 }
 .edu-ctn ul li{
   background-color: #ffffff;
@@ -348,7 +369,7 @@ nav *{
 
 /*  Testimonials section styles  */
 #testimonials-sec{
-  padding: 50px 20px;
+  padding: 50px 6%;
   width: 100vw;
   box-sizing: border-box;
 }
@@ -373,25 +394,26 @@ nav *{
   display: none;
   flex-direction: column;
 }
-.rating * {
-  display: inline-block;
+.rating {
+  display: flex;
+  align-items: center;
 }
 .star-rating {
-  height: 50px;
-  width: 200px;
+  width: 100px;
+  height: 25px;
 }
 .star-rating * {
   position: absolute;
   border-radius: 0;
 }
 .star-rating img{
-  height: 50px;
-  width: 200px;
+  width: 100px;
 }
 .star-rating div{
   background-color: gold;
-  height: 50px;
-  width: 100%;
+  height: 18px;
+  margin-top: 2px;
+  width: 100px;
 }
 .testimonial-text{
   margin-bottom: auto;
@@ -418,15 +440,21 @@ nav *{
   width: 26px;
   animation: btn_animation 1s infinite;
 }
+#testimonials-sec div button div{
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 26px;
+}
 
 
 /* Hire section styles  */
 #hire-sec{
   background-color: #ffffff;
   border-radius: 0;
-  padding: 50px 20px;
+  padding: 50px 6%;
 }
 #hire-sec > div{
+  margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -461,12 +489,13 @@ nav *{
 #qualities-ctn ul li img{
   height: 30px;
   border-radius: 0;
+  filter: saturate(#00a2ff);
 }
 
 
 /*  Contact section styles  */
 #contact-sec{
-  padding: 50px 20px;
+  padding: 50px 6%;
 }
 #contact-sec > div {
   display: flex;
@@ -475,10 +504,15 @@ nav *{
   column-gap: 20px;
 }
 #contact-links{
-  margin: 30px 0;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+  width: 100%;
+}
+#contact-links > ul li{
+  margin: 20px 0;
+  display: flex;
 }
 #contact-links li *{
   display: inline-block;
@@ -486,8 +520,13 @@ nav *{
 #contact-links li div{
   height: 28px;
   width: 28px;
-  margin: 10px 15px;
+  margin-right: 15px;
   background-color: #ffffff;
+}
+#contact-links li div img{
+  height: 24px;
+  display: block;
+  margin: 2px auto;
 }
 #contact-form{
   justify-self: fl;
@@ -503,7 +542,6 @@ nav *{
 }
 form input{
   padding: 14px 18px;
-  border-radius: 30px;
   width: 100%;
   box-sizing: border-box;
   margin-top: 12px;
@@ -517,7 +555,8 @@ form textarea{
   margin-top: 12px;
 }
 form input[type="submit"]{
-  width: 124px;
+  padding: 10px 18px;
+  width: 120px;
   font-size: 17px;
   font-weight: bold;
   background-color: #00E5FF;
@@ -531,7 +570,7 @@ footer *{
 }
 #connect{
   background-color: #ffffff;
-  padding: 30px 20px 40px 20px;
+  padding: 30px 6% 40px;
 }
 #connect > div{
   display: grid;
@@ -600,13 +639,13 @@ footer *{
 }
 @keyframes btn_animation {
   0%{
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
   50%{
-    transform: scale(0.95);
+    transform: scale(0.97);
   }
   100%{
-    transform: scale(1.05);
+    transform: scale(1.01);
   }
 }
 @keyframes line1-anim{
@@ -697,7 +736,6 @@ footer *{
   }
   #btn1{
     height: 20px;
-    padding: 0 5px;
   }
   #about-img div{
     height: 80vw;
@@ -754,13 +792,6 @@ footer *{
   }
 }
 @media (min-width: 1000px) {
-  #services-sec, #about-sec, #tools-sec, #portfolio-sec, #education-sec, #testimonials-sec, #hire-sec, #contact-sec, #connect{
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-  nav{
-    padding: 30px 45px;
-  }
   #nav-links button{
     display: none;
   }
@@ -778,10 +809,20 @@ footer *{
     font-size: 1.1em;
   }
   #nav{
-    padding: 30px 45px;
+    padding: 30px 6% 15px;
   }
   #intro{
-    padding: 100px 45px 20px 45px;
+    padding: 100px 6% 20px;
+  }
+  .edu-ctn{
+    width: 400px;
+    height: 390px;
+  }
+  .edu-ctn ul li{
+    width: 360px;
+    height: 140px;
+    padding: 10px;
+    margin: 20px 0;
   }
   #testimonials-sec ul li{
     height: 200px;
@@ -797,21 +838,20 @@ footer *{
     row-gap: 50px;
     column-gap: 20px;
   }
+  #contact-links{
+    width: 50%;
+  }
   #contact-form{
     margin: auto;
   }
 }
 @media (min-width: 1200px) {
-  #services-sec, #about-sec, #tools-sec, #portfolio-sec, #education-sec, #testimonials-sec, #hire-sec, #contact-sec, #connect{
-    padding-left: 100px;
-    padding-right: 100px;
-  }
   nav{
-    padding: 30px 100px;
+    padding: 30px 6% 15px;
   }
   #nav-links ul{
     display: flex;
-    column-gap: 100px;
+    column-gap: 80px;
   }
   #nav-links ul a{
     color: #00E5FF;
@@ -826,7 +866,7 @@ footer *{
     padding: 30px 100px;
   }
   #intro{
-    padding: 110px 100px 20px 100px;
+    padding: 110px 6% 20px;
   }
   #intro-img{
     margin: auto 0 auto auto;
@@ -838,6 +878,9 @@ footer *{
   #intro-img div div{
     height: 420px;
     width: 420px;
+  }
+  .service{
+    width: 280px;
   }
   #about-img{
     width: 450px;
@@ -853,25 +896,15 @@ footer *{
   }
   .portfolio-item{
     height: 500px;
-    width: 322px;
+    width: 350px;
   }
   .portfolio-item div{
     height: 400px;
-    width: 312px;
+    width: 340px;
+    margin: 5px auto;
   }
   .portfolio-item ul li{
     padding: 10px 20px;
-  }
-  .edu-ctn{
-    height: 400px;
-    width: 352px;
-    padding: 20px 16px;
-  }
-  .edu-ctn ul li{
-    height: 152px;
-    width: 320px;
-    margin: 16px auto 0 auto;
-    padding: 8px 11px;
   }
   #contact-sec > div {
     display: flex;

@@ -11,7 +11,7 @@
   <title>Victory's Portfolio</title>
 </head>
 <body>
-  <nav>
+  <nav id="top-nav">
     <div id="logo">
       <img src="./images/icons/logo.svg" alt="Logo">
       <h3 class="blue-text">Victory Tech</h3>
@@ -29,10 +29,10 @@
   </nav>
   <div id="nav-links-mob-ctn">
     <ul id="nav-links-mob">
-      <li><a href="#intro"><h3 class="no-uppercase">Introduction</h3><h2 class="arrow-left">></h2></a></li>
-      <li><a href="#about-sec"><h3 class="no-uppercase">About</h3><h2 class="arrow-left">></h2></a></li>
-      <li><a href="#portfolio-sec"><h3 class="no-uppercase">Portfolio</h3><h2 class="arrow-left">></h2></a></li>
-      <li><a href="#contact-sec"><h3 class="no-uppercase">Contact</h3><h2 class="arrow-left">></h2></a></li>
+      <li><a href="#intro"><h3 class="no-uppercase">Introduction</h3><h2 class="arrow-left">&#187;</h2></a></li>
+      <li><a href="#about-sec"><h3 class="no-uppercase">About</h3><h2 class="arrow-left">&#187;</h2></a></li>
+      <li><a href="#portfolio-sec"><h3 class="no-uppercase">Portfolio</h3><h2 class="arrow-left">&#187;</h2></a></li>
+      <li><a href="#contact-sec"><h3 class="no-uppercase">Contact</h3><h2 class="arrow-left">&#187;</h2></a></li>
     </ul>
   </div>
   <section id="intro">
@@ -49,7 +49,7 @@
     </div>
     <div id="intro-buttons">
       <a class="blue-text button" id="btn1" href="#"><h3>Contact me</h3></a>
-      <a class="button" id="btn2" href="#portfolio-sec"><h3>View my portfolio </h3><img src="./images/icons/play_white_bg.svg" alt=""></a>
+      <a class="button" id="btn2" href="#portfolio-sec"><h3>View my portfolio </h3><div>&#187;</div></a>
     </div>
     <div id="intro-links">
       <p class="white-text">Follow me on:</p>
@@ -70,7 +70,7 @@
       <ul>
         <li class="service">
           <div>
-            <div><img src="" alt="Web design icon"></div>
+            <div><img src="./images/icons/design-icon.svg" alt="Web design icon"></div>
             <h3>Web design</h3>
             <p class="service-text">dfergegre</p>
             <p class="blue-text">Learn more ></p>
@@ -78,7 +78,7 @@
         </li>
         <li class="service">
           <div>
-            <div><img src="" alt="Web dev icon"></div>
+            <div><img src="./images/icons/webdev-icon.svg" alt="Web dev icon"></div>
             <h3>Web development</h3>
             <p class="service-text"></p>
             <p class="blue-text">Learn more ></p>
@@ -86,7 +86,7 @@
         </li>
         <li class="service appear">
           <div>
-            <div><img src="" alt="UI/UX design icon"></div>
+            <div><img src="./images/icons/uiux-icon.svg" alt="UI/UX design icon"></div>
             <h3>UI/UX design</h3>
             <p class="service-text"></p>
             <p class="blue-text">Learn more ></p>
@@ -94,7 +94,7 @@
         </li>
       </ul>
     </div>
-    <a class="button appear" href="./pages/services.html"><h3>View all services</h3><img src="./images/icons/play_white_bg.svg" alt=""></a>
+    <a class="button appear" href="./pages/services.html"><h3>View all services</h3><div>&#187;</div></a>
   </section>
   <section id="about-sec" class="white-bg ctn">
     <h3 class=" appear">- About me</h3>
@@ -114,7 +114,7 @@
           Hire me for simplicity, speed and stunning design.
         </p>
         <div id="about-btn-sign">
-          <a class="button  appear" href="./pages/cvpage.html"><h3>Download CV</h3><img src="./images/icons/play_white_bg.svg" alt=""></a>
+          <a class="button  appear" href="./pages/cvpage.html"><h3>Download CV</h3><div>&#187;</div></a>
           <p id="sign" class=" appear">Victory</p>
         </div>
       </div>
@@ -126,38 +126,38 @@
       <ul id="tools">
         <li class="tool odd appear">
           <div>
-            <div><img src="" alt=""></div>
-            <span>90%</span>
+            <div><img src="./images/icons/htmlcss-icon.svg" alt=""></div>
+            <span>99%</span>
           </div>
           <h3>HTML/CSS</h3>
         </li>
         <li class="tool even appear">
           <div>
-            <span>90%</span>
-            <div><img src="" alt=""></div>
+            <span>92%</span>
+            <div><img src="./images/icons/bootstrap-icon.svg" alt=""></div>
           </div>
-          <h3>Javascript</h3>
+          <h3>Bootstrap</h3>
         </li>
         <li class="tool odd appear">
           <div>
-            <div><img src="" alt=""></div>
-            <span>90%</span>
+            <div><img src="./images/icons/react-icon.svg" alt=""></div>
+            <span>70%</span>
           </div>
           <h3>React</h3>
         </li>
         <li class="tool even appear">
           <div>
-            <span>90%</span>
-            <div><img src="" alt=""></div>
+            <span>99%</span>
+            <div><img src="./images/icons/design-icon.svg" alt=""></div>
           </div>
           <h3>Web design</h3>
         </li>
         <li class="tool odd appear">
           <div>
-            <div><img src="" alt=""></div>
-            <span>90%</span>
+            <div><img src="./images/icons/javascript-icon.svg" alt=""></div>
+            <span>97%</span>
           </div>
-          <h3>Bootstrap</h3>
+          <h3>Javascript</h3>
         </li>
       </ul>
     </div>
@@ -194,14 +194,14 @@
         </ul>
       </li>
     </ul>
-    <a class="button appear" href="./pages/projects.html"><h3>View all projects</h3><img src="./images/icons/play_white_bg.svg" alt=""></a>
+    <a class="button appear" href="./pages/projects.html"><h3>View all projects</h3><div>&#187;</div></a>
   </section>
   <section id="education-sec">
     <h3 class="white-text appear">- Education & work</h3>
     <h1 class="white-text appear">My <span class="blue-text italic">Academic And Professional</span> Journey</h1>
     <div>
       <div class="edu-ctn appear">
-        <span class="title">Education</span>
+        <span class="title"><img src="./images/icons/edu-icon.svg" alt="">Education</span>
         <ul>
           <li>
             <span class="text">2023 - now</span>
@@ -216,7 +216,7 @@
         </ul>
       </div>
       <div class="edu-ctn appear">
-        <span class="title">Work Experience</span>
+        <span class="title"><img src="./images/icons/edu-icon.svg" alt="">Work Experience</span>
         <ul>
           <li>
             <span class="text">2024 - now</span>
@@ -242,7 +242,7 @@
             <div></div>
             <img src="./images/icons/star-rating.svg" alt="">
           </div>
-          <h5>rating</h5>
+          <h5>??</h5>
         </div>
         <p class="testimonial-text">t1</p>
         <div class="client-detail">
@@ -259,7 +259,7 @@
             <div></div>
             <img src="./images/icons/star-rating.svg" alt="">
           </div>
-          <h5>rating</h5>
+          <h5>??</h5>
         </div>
         <p class="testimonial-text">t2</p>
         <div class="client-detail">
@@ -276,7 +276,7 @@
             <div></div>
             <img src="./images/icons/star-rating.svg" alt="">
           </div>
-          <h5>rating</h5>
+          <h5>??</h5>
         </div>
         <p class="testimonial-text">t3</p>
         <div class="client-detail">
@@ -289,23 +289,23 @@
       </li>
     </ul>
     <div>
-      <button title="previous" id="prev-btn" class=" appear"><img src="./images/icons/move_left_btn.svg" alt=""></button>
-      <button title="next" id="next-btn" class=" appear"><img src="./images/icons/move_right_btn.svg" alt=""></button>
+      <button title="previous" id="prev-btn" class=" appear"><div>&#8249;</div></button>
+      <button title="next" id="next-btn" class=" appear"><div>&#8250;</div></button>
     </div>
   </section>
   <section id="hire-sec">
     <h3 class=" appear">- contact us now</h3>
     <h1 class=" appear">let's start <span class="blue-text italic">work ASAP</span></h1>
     <div>
-      <div class=" appear"><img id="illustration-1" src="./images/icons/web_development_maintenance_construction_teamwork_icon.svg" alt=""></div>
+      <div class=" appear"><img id="illustration-1" src="./images/icons/web_maintenance_illustration.svg" alt=""></div>
       <div>
         <h2 class=" appear">Why choose <span class="blue-text italic">Victory Tech</span>?</h2>
         <div id="qualities-ctn" class="appear">
           <ul>
-            <li><img src="./images/icons/clock_performance_speed_icon.svg" alt=""><h3 class="italic">Speed</h3></li>
-            <li><img src="" alt=""><h3 class="italic">QUality</h3></li>
-            <li><img src="./images/icons/security_database_icon.svg" alt=""><h3 class="italic">Security</h3></li>
-            <li><img src="" alt=""><h3 class="italic">Affordability</h3></li>
+            <li><img src="./images/icons/speed-icon.svg" alt=""><h3 class="italic">Speed</h3></li>
+            <li><img src="./images/icons/quality-icon.svg" alt=""><h3 class="italic">Quality</h3></li>
+            <li><img src="./images/icons/security-icon.svg" alt=""><h3 class="italic">Security</h3></li>
+            <li><img src="./images/icons/affordability-icon.svg" alt=""><h3 class="italic">Affordability</h3></li>
           </ul>
           <img id="illustration-2" src="./images/icons/web_development_coding_programming_binary_icon.svg" alt="">
         </div>
@@ -319,15 +319,15 @@
       <div id="contact-links">
         <ul>
           <li class="appear">
-            <div><img src="" alt=""></div>
+            <div title="Whatsapp link"><img src="./images/icons/whatsapp_icon.svg" alt="Whatsapp link"></div>
             <p class="blue-text">+234 810 571 5843</p>
           </li>
           <li class="appear">
-            <div><img src="" alt=""></div>
+            <div title="G-mail link"><img src="./images/icons/gmail_icon.svg" alt="G-mail"></div>
             <p class="blue-text">victorytechv1@gmail.com</p>
           </li>
           <li class="appear">
-            <div><img src="" alt=""></div>
+            <div title="Visit our linkedIn page"><img src="./images/icons/linkedin_icon.svg" alt="LinkedIn link"></div>
             <p class="blue-text">victory tech</p>
           </li>
         </ul>

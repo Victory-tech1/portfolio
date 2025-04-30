@@ -3,7 +3,7 @@
  margin: 0;
  padding: 0;
  border: none;
- border-radius: 20px;
+ border-radius: 5px;
  color: #212121;
 }
 .appear{
@@ -79,12 +79,14 @@ h5{
   width: max-content;
 }
 .button h3{
-  margin: 0 20px;
+  margin: auto 10px;
   font-size: 0.75em;
 }
-.button img{
-  height: 22px;
-  margin-right: 2px;
+.button div{
+  font-size: 1.437em;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-right: 8px;
   animation: arrow_animation 1s infinite;
 }
 @keyframes elements_appear_onscroll {
