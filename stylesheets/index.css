@@ -99,7 +99,11 @@ nav *{
   background-color: #00E5FF;
   height: 320px;
   width: 320px;
-  border-radius: 30px 5px 250px 5px;
+  border-radius: 5px 5px 250px 5px;
+}
+.dp{
+  margin: -10% auto 0 5%;
+  height: 110%;
 }
 #intro-buttons{
   display: flex;
@@ -138,6 +142,7 @@ nav *{
 #intro-links ul li{
   background-color: #ffffff;
   height: 22px;
+  padding: 3px;
   animation: btn_animation 1s infinite;
 }
 
@@ -153,10 +158,11 @@ nav *{
   justify-content: space-evenly;
 }
 .service{
-  height: 200px;
-  width: 200px;
+  height: auto;
+  min-width: 150px;
+  max-width: 300px;
   background-color: white;
-  padding: 20px;
+  padding: 20px 15px;
   margin: 0 15px;
 }
 .service > div{
@@ -169,6 +175,10 @@ nav *{
   border-radius: 50%;
   height: 53px;
   width: 53px;
+  margin: auto;
+  text-align: center;
+}
+.service h3{
   text-align: center;
 }
 .service div div img{
@@ -176,7 +186,9 @@ nav *{
   margin-top: 4px;
 }
 .service-text{
-  margin-bottom: auto;
+  margin: 15px 0;
+  padding: 0 5px;
+  background-color: #DFDFDF;
 }
 #services-sec > a{
   margin: auto;
@@ -199,7 +211,7 @@ nav *{
 #about-img div div{
   height: 320px;
   width: 320px;
-  border-radius: 5px 30px 5px 250px;
+  border-radius: 5px 5px 5px 250px;
   background-color: #00E5FF;
 }
 #about-btn-sign{
@@ -270,6 +282,9 @@ nav *{
 .tool h3{
   margin-top: 13px;
 }
+.react{
+  animation: rotate 7s infinite;
+}
 
 /*  Portfolio section styles  */
 #portfolio-sec{
@@ -298,6 +313,11 @@ nav *{
   box-sizing: border-box;
   margin: 5px;
   background-color: #DFDFDF;
+}
+.portfolio-item img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .portfolio-item ul{
   margin: 10px;
@@ -436,14 +456,13 @@ nav *{
   margin-top: 200px;
 }
 #testimonials-sec div button{
-  height: 26px;
-  width: 26px;
+  height: 30px;
+  width: 30px;
   animation: btn_animation 1s infinite;
 }
-#testimonials-sec div button div{
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 26px;
+#testimonials-sec div button img{
+  height: 15px;
+  margin: 7.5px auto;
 }
 
 
@@ -488,8 +507,8 @@ nav *{
 }
 #qualities-ctn ul li img{
   height: 30px;
+  width: 30px;
   border-radius: 0;
-  filter: saturate(#00a2ff);
 }
 
 
@@ -712,6 +731,17 @@ footer *{
     transform: translate(-300px, 0px);
     opacity: 0;
     display: none;
+  }
+}
+@keyframes rotate {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%{
+    transform: rotate(360deg);
+  }
+  100%{
+    transform: rotate(0deg for);
   }
 }
 @media (max-width: 375px) {
