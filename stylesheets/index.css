@@ -102,7 +102,7 @@ nav *{
   border-radius: 5px 5px 250px 5px;
 }
 .dp{
-  margin: -10% auto 0 5%;
+  margin: -10% auto 0 -5%;
   height: 110%;
 }
 #intro-buttons{
